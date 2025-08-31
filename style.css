@@ -72,60 +72,54 @@ body {
 .nav a[aria-current="page"] { color: #fff; background: var(--brand); }
 .nav a:hover { background: var(--surface); }
 
-/* ---------- Mobile-friendly header & menu ---------- */
+/* ---------- Mobile-friendly header & menu (replacement) ---------- */
 
-/* Details/summary base */
-.menu { margin-left: auto; position: relative; }
-.menu[open] { isolation: isolate; }
+/* Keep the menu container at the right */
+.menu{ margin-left:auto; position:relative; }
+.menu[open]{ isolation:isolate; }
 
 /* Hide default disclosure arrow */
-.menu-toggle { list-style: none; cursor: pointer; user-select: none; }
-.menu-toggle::-webkit-details-marker { display: none; }
-.menu-toggle::marker { content: ""; }
+.menu-toggle{ list-style:none; cursor:pointer; user-select:none; }
+.menu-toggle::-webkit-details-marker{ display:none; }
+.menu-toggle::marker{ content:""; }
 
 /* Hamburger button */
-.menu-toggle {
-  display: inline-flex; align-items: center; gap: .5rem;
-  padding: .6rem .8rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #fff;
-  font-weight: 700;
+.menu-toggle{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.6rem .8rem;
+  border:1px solid var(--border);
+  border-radius:10px; background:#fff; font-weight:700;
 }
-.menu-toggle:focus-visible {
-  outline: 3px solid rgba(190, 24, 93, .35);
-  outline-offset: 2px;
+.menu-toggle:focus-visible{
+  outline:3px solid rgba(190,24,93,.35); outline-offset:2px;
 }
 
-.hamburger {
-  width: 20px; height: 14px; position: relative; display: inline-block;
-}
+/* 3-bar icon (needs inner <span>) */
+.hamburger{ width:20px; height:14px; position:relative; display:inline-block; }
 .hamburger::before,
 .hamburger::after,
-.hamburger span {
-  content: ""; position: absolute; left: 0; right: 0; height: 2px; background: var(--text);
+.hamburger span{
+  content:""; position:absolute; left:0; right:0; height:2px; background:var(--text);
 }
-.hamburger::before { top: 0; }
-.hamburger span      { top: 6px; }
-.hamburger::after  { bottom: 0; }
+.hamburger::before{ top:0; }
+.hamburger span{ top:6px; }
+.hamburger::after{ bottom:0; }
 
-/* Desktop/tablet: keep your current horizontal nav */
-@media (min-width: 721px) {
-  /* Make the menu behave like a normal inline nav */
-  .menu { all: unset; margin-left: auto; }
-  .menu > nav { all: unset; }
-  .menu > nav .nav {
-    list-style: none; margin: 0; padding: 0;
-    display: flex; flex-wrap: wrap; gap: .25rem;
+/* Menu panel media query */
+@media (min-width: 720px) {
+  .menu {
+    display: block !important;
+    position: static;
+    margin-left: auto;
   }
-  .menu > nav .nav a {
-    text-decoration: none; color: var(--text);
-    padding: .85rem .8rem; border-radius: 10px;
+  .menu-toggle {
+    display: none !important;
   }
-  .menu > nav .nav a:hover { background: var(--surface); }
-  .menu > nav .nav a[aria-current="page"] { color: #fff; background: var(--brand); }
-   /* hide hamburger on larger screens */
-  .menu > .menu-toggle { display: none; }
+}
+@media (max-width: 719px) {
+        .nav-desktop {
+            display: none;
+        }
 }
 
 /* Hero */
