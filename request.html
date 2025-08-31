@@ -24,6 +24,44 @@
             </ul>
         </nav>
     </header>
+    <!-- Main Content -->
+     <main class="container flow">
+        <h1>Flower Request Form</h1>
+        <!-- Request form, with html5 validation, redirects to confirmation page, no database -->
+         <form action="confirm.html" class="form card">
+            <fieldset>
+                <legend>Order Details</legend>
+                <label for="flowers">Flower choices</label>
+                <select name="flower" id="flower" required>
+                    <option value="Classic Roses">Classic Roses</option>
+                    <option value="Spring Tulips">Spring Tulips</option>
+                    <option value="Seasonal Mix">Seasonal Mix</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+                <label for="date">Delivery Date</label>
+                <input type="date" id="date" name="delivery_date" required>
+                <label for="time">Preferred Delivery Time</label>
+                <input type="time" id="time" name="delivery_time" min="09:00" max="18:00" required>
+            </fieldset>
+            <fieldset>
+                <legend>Customer Details</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Delivery Address</label>
+                <textarea type="text" id="address" name="address" rows="3" required placeholder="Street, Area, City"></textarea>
+                <!-- Uses a regex for a broadly compatible phone number pattern -->
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="^[0-9+()\-\s]{7,}$" placeholder="+260 7xx xxx xxx">
+                <label for="notes">Additional Requests (optional)</label>
+                <textarea name="notes" id="notes" rows="3" placeholder="Card message, contactless delivery, etc"></textarea>
+                
+            </fieldset>
+            <p class="muted small">By submitting, you agree to be contacted to confirm your order and delivery details.
+            Payment is on delivery—no online payment required.</p>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+         </form>
+     </main>
     <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> Flowers4U, Lusaka. All rights reserved.</p>
