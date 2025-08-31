@@ -75,6 +75,11 @@ body {
 .menu { margin-left: auto; position: relative; }
 .menu[open] { isolation: isolate; }
 
+/* Hide default disclosure arrow */
+.menu-toggle { list-style: none; cursor: pointer; user-select: none; }
+.menu-toggle::-webkit-details-marker { display: none; }
+.menu-toggle::marker { content: ""; }
+
 /* Hero */
 .hero {
   padding: 2.5rem 0 1.5rem;
