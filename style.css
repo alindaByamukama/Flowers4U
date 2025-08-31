@@ -1,0 +1,10 @@
+/* Flowers4U - External stylesheet */
+
+/* Reset some default styles */
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+html, body {margin: 0; padding: 0;}
+
+img {max-width: 100%; display: block; height: auto;} 
