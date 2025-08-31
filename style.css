@@ -201,9 +201,14 @@ input:focus, select:focus, textarea:focus {
 
 /* Footer */
 .site-footer {
-  margin-top: 3rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   border-top: 1px solid var(--border);
   background: #fff;
   padding: 1rem 0;
   text-align: center;
+  margin-top: 3rem;
+  z-index: 10;
 }
