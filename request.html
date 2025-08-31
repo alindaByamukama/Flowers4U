@@ -12,23 +12,30 @@
     <!-- Site Header -->
     <header class="site-header">
         <a href="index.html" class="brand">Flowers4U</a>
-        <!-- Navigation -->
-        <nav aria-label="Primary">
-            <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="flowers.html">Flower Ranges & Prices</a></li>
-                <li><a href="occasions.html">Occasions & Delivery Terms</a></li>
-                <li><a aria-current="page" href="request.html">Request Form</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- Accessible (mobile) menu -->
+        <details class="menu">
+            <summary class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+                Menu
+            </summary>
+            <!-- Navigation -->
+            <nav aria-label="Primary">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="flowers.html">Flower Ranges & Prices</a></li>
+                    <li><a href="occasions.html">Occasions & Delivery Terms</a></li>
+                    <li><a aria-current="page" href="request.html">Request Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </details>
     </header>
     <!-- Main Content -->
-     <main class="container flow">
+    <main class="container flow">
         <h1>Flower Request Form</h1>
         <!-- Request form, with html5 validation, redirects to confirmation page, no database -->
-         <form action="confirm.html" class="form card" method="get">
+        <form action="confirm.html" class="form card" method="get">
             <fieldset>
                 <legend>Order Details</legend>
                 <label for="flowers">Flower choices</label>
@@ -49,19 +56,21 @@
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="address">Delivery Address</label>
-                <textarea type="text" id="address" name="address" rows="3" required placeholder="Street, Area, City"></textarea>
+                <textarea type="text" id="address" name="address" rows="3" required
+                    placeholder="Street, Area, City"></textarea>
                 <!-- Uses a regex for a broadly compatible phone number pattern -->
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" pattern="^[0-9+()\-\s]{7,}$" placeholder="+260 7xx xxx xxx">
                 <label for="notes">Additional Requests (optional)</label>
-                <textarea name="notes" id="notes" rows="3" placeholder="Card message, contactless delivery, etc"></textarea>
-                
+                <textarea name="notes" id="notes" rows="3"
+                    placeholder="Card message, contactless delivery, etc"></textarea>
+
             </fieldset>
             <p class="muted small">By submitting, you agree to be contacted to confirm your order and delivery details.
-            Payment is on delivery—no online payment required.</p>
+                Payment is on delivery—no online payment required.</p>
             <button type="submit" class="btn btn-primary">Submit Request</button>
-         </form>
-     </main>
+        </form>
+    </main>
     <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> Flowers4U, Lusaka. All rights reserved.</p>

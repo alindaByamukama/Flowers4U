@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Flowers4U</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        <!-- Site Header -->
-        <header class="site-header">
-            <a href="index.html" class="brand">Flowers4U</a>
+    <!-- Site Header -->
+    <header class="site-header">
+        <a href="index.html" class="brand">Flowers4U</a>
+        <!-- Accessible (mobile) menu -->
+        <details class="menu">
+            <summary class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+                Menu
+            </summary>
             <!-- Navigation -->
             <nav aria-label="Primary">
                 <ul class="nav">
@@ -21,21 +29,29 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
-     <!-- Main Content -->
-        <main class="container flow">
-            <h1>About Flowers4U</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem, consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque itaque perspiciatis!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem, consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque itaque perspiciatis!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem, consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque itaque perspiciatis!</p>
-        </main>
-        <!-- Footer -->
-        <footer class="site-footer">
-            <p>&copy; <span id="year"></span> Flowers4U, Lusaka. All rights reserved.</p>
-        </footer>
-        <!-- Dynamic Year Script -->
-        <script>
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
+        </details>
+    </header>
+    <!-- Main Content -->
+    <main class="container flow">
+        <h1>About Flowers4U</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem,
+            consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque
+            itaque perspiciatis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem,
+            consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque
+            itaque perspiciatis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium quasi ut deleniti exercitationem,
+            consequuntur aliquid enim, iste tempora libero quae, architecto fugit facere eius! Saepe voluptatibus cumque
+            itaque perspiciatis!</p>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Flowers4U, Lusaka. All rights reserved.</p>
+    </footer>
+    <!-- Dynamic Year Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
