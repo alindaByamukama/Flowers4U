@@ -160,6 +160,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   box-shadow: var(--shadow);
+  margin: .25rem;
 }
 .btn:hover { background: var(--brand-2); }
 .btn-ghost {
