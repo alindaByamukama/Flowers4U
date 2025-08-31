@@ -1,7 +1,7 @@
 # Flowers4U
 Build a static website for Flowers4U, a Lusaka-based florist, to allow customers to browse flower options and place delivery requests online. (UU - MWD-520-ZM Applied Art for the Web Assignment)
 
-**Demo Link:** ...
+**Demo Link:** https://alindabyamukama.github.io/Flowers4U/
 
 ## Output Requirements
 
