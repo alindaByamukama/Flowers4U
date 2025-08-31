@@ -70,7 +70,8 @@
                     placeholder="Street, Area, City"></textarea>
                 <!-- Uses a regex for a broadly compatible phone number pattern -->
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" pattern="^[0-9+()\-\s]{7,}$" placeholder="+260 7xx xxx xxx">
+                <input type="tel" id="phone" name="phone" pattern="^\+?(260)?\s?(7\d{2}|9\d{2})\s?\d{3}\s?\d{3}$"
+                    placeholder="+260 7xx xxx xxx" title="Enter a valid Zambian number e.g. +260 7xx xxx xxx">
                 <label for="notes">Additional Requests (optional)</label>
                 <textarea name="notes" id="notes" rows="3"
                     placeholder="Card message, contactless delivery, etc"></textarea>
