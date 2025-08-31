@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Flowers4U</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Site Header -->
+    <header class="site-header">
+        <a class="brand" href="index.html">Flowers4U</a>
+        <!-- Navigation -->
+        <nav aria-label="Primary">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="flowers.html">Flower Ranges & Prices</a></li>
+                <li><a href="occasions.html">Occasions & Delivery Terms</a></li>
+                <li><a href="request.html">Request Form</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Flowers4U, Lusaka.</p>
+    </footer>
+    <!-- Dynamic Year Script -->
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
