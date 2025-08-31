@@ -143,3 +143,12 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--brand-2);
   box-shadow: 0 0 0 3px rgba(190, 24, 93, .15);
 }
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  background: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
