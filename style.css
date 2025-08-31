@@ -145,7 +145,11 @@ body {
   padding: 1rem;
   box-shadow: var(--shadow);
 }
-.card img { border-radius: 12px; }
+.card img { 
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px; }
 .card figcaption { margin-top: .6rem; }
 .card small { display: block; color: var(--muted); }
 
