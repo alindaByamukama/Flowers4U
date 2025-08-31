@@ -8,3 +8,26 @@
 html, body {margin: 0; padding: 0;}
 
 img {max-width: 100%; display: block; height: auto;} 
+
+/* Theme */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --text: #1f2937;       /* slate-800 */
+  --muted: #6b7280;      /* slate-500 */
+  --brand: #9d174d;      /* rose-800 */
+  --brand-2: #be185d;    /* rose-700 */
+  --border: #e5e7eb;     /* slate-200 */
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.06);
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+               Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
