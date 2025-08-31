@@ -73,3 +73,24 @@ body {
   padding: 2.5rem 0 1.5rem;
 }
 .hero h1 { font-size: clamp(1.8rem, 2.5vw, 2.4rem); line-height: 1.2; }
+
+/* Grid & Cards */
+.grid-3 {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1rem;
+}
+.grid-2 {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+.card img { border-radius: 12px; }
+.card figcaption { margin-top: .6rem; }
+.card small { display: block; color: var(--muted); }
