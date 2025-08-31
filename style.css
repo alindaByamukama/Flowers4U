@@ -67,3 +67,9 @@ body {
 }
 .nav a[aria-current="page"] { color: #fff; background: var(--brand); }
 .nav a:hover { background: var(--surface); }
+
+/* Hero */
+.hero {
+  padding: 2.5rem 0 1.5rem;
+}
+.hero h1 { font-size: clamp(1.8rem, 2.5vw, 2.4rem); line-height: 1.2; }
