@@ -57,7 +57,7 @@
                 <label for="quantity">Quantity</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="100" required>
                 <label for="date">Delivery Date</label>
-                <input type="date" id="date" name="delivery_date" required>
+                <input type="date" id="date" name="delivery_date" required min="" max="">
                 <label for="time">Preferred Delivery Time</label>
                 <input type="time" id="time" name="delivery_time" min="09:00" max="18:00" required>
             </fieldset>
@@ -88,6 +88,20 @@
     <!-- Dynamic Year Script -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        // Set min date to today, max date to 30 days from now
+        const dateField = document.getElementById('date');
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        dateField.min = `${yyyy}-${mm}-${dd}`;
+
+        const maxDate = new Date();
+        maxDate.setDate(today.getDate() + 30);
+        const maxY = maxDate.getFullYear();
+        const maxM = String(maxDate.getMonth() + 1).padStart(2, '0');
+        const maxD = String(maxDate.getDate()).padStart(2, '0');
+        dateField.max = `${maxY}-${maxM}-${maxD}`;
     </script>
 </body>
 
