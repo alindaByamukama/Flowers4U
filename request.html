@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Request Form - Flowers4U</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="valentines.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -43,9 +49,9 @@
     </header>
     <!-- Main Content -->
     <main class="container flow">
-        <h1>Flower Request Form</h1>
+        <h1 class="bellota-bold">Flower Request Form</h1>
         <!-- Request form, with html5 validation, redirects to confirmation page, no database -->
-        <form action="confirm.html" class="form card" method="get">
+        <form action="confirm.html" class="form two-col card" method="get">
             <fieldset>
                 <legend>Order Details</legend>
                 <label for="flowers">Flower choices</label>
@@ -77,9 +83,15 @@
                     placeholder="Card message, contactless delivery, etc"></textarea>
 
             </fieldset>
-            <p class="muted small">By submitting, you agree to be contacted to confirm your order and delivery details.
-                Payment is on delivery—no online payment required.</p>
-            <button type="submit" class="btn btn-primary">Submit Request</button>
+            <p class="muted small full">
+                By submitting, you agree to be contacted to confirm your order and delivery details.
+                Payment is on delivery—no online payment required.
+            </p>
+            
+            <div class="form-actions full">
+                <button type="submit" class="btn">Submit Request</button>
+            </div>
+
         </form>
     </main>
     <!-- Footer -->
